@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #f1f3f7;
+  position: relative;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+#intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #141622;
+}
+
+#intro .headrest {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 300px;
+}
+
+#intro #loader {
+  fill: #354050;
+  width: 70px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+}
+
+#intro h1 {
+  text-transform: uppercase;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 120px;
+  color: #354050;
+  text-align: center;
+}
+
+#intro h1 span {
+  display: inline-block;
+}
+
+#intro h1 span:not(:last-child) {
+  margin-right: 5px;
+}
+
+#intro h1 span.is-space {
+  width: 15px;
+}
+
+#homepage {
+  position: relative;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  height: 100%;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
