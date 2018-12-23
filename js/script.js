@@ -24,6 +24,11 @@ var $titleIntro = document.getElementById('title-intro');
 var titleIntro = new CryptEffect($titleIntro);
 titleIntro.letterIt(['letter']);
 
+TweenMax.to('#title-intro', 0.25, {
+    opacity: 1,
+    ease: Power3.easeIn,
+})
+
 //GSAP ANIMATION
 document.addEventListener('DOMContentLoaded', function(event) {
 
@@ -50,6 +55,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
         y: 0,
         ease: Expo.easeInOut,
         delay: 3,
+    })
+    TweenMax.to('body', 0.2, {
+        overflow: 'inherit',
+        delay: 4,
     })
 });
         
