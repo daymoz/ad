@@ -34,32 +34,41 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
     var tlIntro = new TimelineLite;
 
-    tlIntro
-        .staggerTo('.letter', 0.25, {
-            y: -20,
-            opacity: 0,
-            ease: Power3.easeOut,
-            delay: 1.5,
-        }, 0.1)
-        .to('#loader', 0.25, {
-            opacity: 0,
-            ease: Power3.easeOut,
-        })
+    // tlIntro
+    //     .staggerTo('.letter', 0.25, {
+    //         y: -20,
+    //         opacity: 0,
+    //         ease: Power3.easeOut,
+    //         delay: 1.5,
+    //     }, 0.1)
+    //     .to('#loader', 0.25, {
+    //         opacity: 0,
+    //         ease: Power3.easeOut,
+    //     })
 
-    TweenMax.to('#intro', 1, {
-        y: '-100%',
-        ease: Expo.easeInOut,
-        delay: 3,
-    })
-    TweenMax.to('#homepage', 1, {
-        y: 0,
-        ease: Expo.easeInOut,
-        delay: 3,
-    })
-    TweenMax.to('body', 0.2, {
-        overflow: 'inherit',
-        delay: 4,
-    })
+    // TweenMax.to('#intro', 1, {
+    //     y: '-100%',
+    //     ease: Expo.easeInOut,
+    //     delay: 3,
+    // })
+    // TweenMax.to('#homepage', 1, {
+    //     y: 0,
+    //     ease: Expo.easeInOut,
+    //     delay: 3,
+    // })
+    // TweenMax.to('body', 0.2, {
+    //     overflow: 'unset',
+    //     delay: 4,
+    //     onComplete: function() {
+    //         var intro = document.getElementById('intro');
+    //         intro.remove();
+    //     }
+    // })
+    // TweenMax.to('#intro', 0.2, {
+    //     display: 'none',
+    //     visibility: 'hidden',
+    //     delay: 4,
+    // });
 });
         
 

@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Adrien Douay | Concept Artist</title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div id="intro">
         <div class="headrest">
-            <h1 id="title-intro">Adrien Douay</h1>
+            <h1 id="title-intro">A D</h1>
             <svg id="loader" width="200px"  height="200px" viewBox="0 0 100 100" preserveAspectRatio="none" class="lds-eclipse" style="background: none;"><path ng-attr-d="{{config.pathCmd}}" ng-attr-fill="{{config.color}}" stroke="none" d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50" 
                 transform="rotate(64.6438 50 51)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 51;360 50 51" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform></path></svg>
         
@@ -20,13 +20,29 @@
     </div>
     <section id="homepage">
         <header id="sidebar">
-            <h2>Adrien Douay</h2>
-            <p>Concept artist</p>
-            <nav id="nav-item">
-                <ul></ul>
+            <div class="header-main">
+                <h2>Adrien Douay</h2>
+                <p>Concept artist</p>
+            </div>
+            <nav id="nav-filters">
+                <ul>
+                    <li class="nav-filters-item"><a href="#">Illustrations</a></li>
+                    <li class="nav-filters-item"><a href="#">3D</a></li>
+                    <li class="nav-filters-item"><a href="#">Etude de Vray</a></li>
+                    <li class="nav-filters-item"><a href="#">Paint</a></li>
+                </ul>
+            </nav>
+            <nav id="network-menu">
+                <ul>
+                    <li class="nav-network-item"><a id="fb" href="#">Facebook</a></li>
+                    <li class="nav-network-item"><a id="insta" href="#">Instagram</a></li>
+                    <li class="nav-network-item"><a id="artstation" href="#">Artstation</a></li>
+                </ul>
             </nav>
         </header>
-        
+        <main role="main" id="main-subject">
+            <button id="about">About</button>
+        </main>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>

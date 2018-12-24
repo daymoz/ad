@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -5,9 +12,20 @@ html, body {
     height: 100%;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: crosshair;
+}
+
 $grey: #141622;
 $greyclearer : #354050;
-$white: #f1f3f7;
+$greyblue : #e7e3e3;
+$white: #ffffff;
 
 body {
     background-color: $grey;
@@ -15,8 +33,10 @@ body {
     overflow: hidden;
 }
 
-h1, h2 {
+h1, h2, p {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: $greyclearer;
 }
 
 #intro {
@@ -28,7 +48,6 @@ h1, h2 {
     display: block;
     background-color: $grey;
     overflow: hidden;
-
     .headrest {
         position: absolute;
         top: 50%;
@@ -39,20 +58,21 @@ h1, h2 {
 
     #loader {
         fill: $greyclearer;
-        width: 70px;
+        width: 80px;
         height: auto;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
         bottom: 0;
     }
 
     h1 {
         text-transform: uppercase;
         position: relative;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 700;
-        font-size: 120px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 250px;
         color: $greyclearer;
         text-align: center;
 
@@ -68,7 +88,7 @@ h1, h2 {
             }
 
             &.is-space {
-                width: 15px;
+                width: 200px;
             }
         }
 
@@ -77,8 +97,116 @@ h1, h2 {
 
 #homepage {
     position: relative;
-    transform: translateY(100%);
+    transform: translateY(0);
     height: 100%;
     width: 100%;
     background-color: $white;
+    overflow: hidden;
+
+    header#sidebar {
+        position: fixed;
+        width: 20%;
+        height: 100%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        //border-right: 1px solid $greyblue;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 1px;
+            background-color: $greyblue;
+            margin: 0;
+            top: 0;
+            left: 100%;
+        }
+
+        & .header-main {
+            cursor: crosshair;
+            padding: 15px;
+            position: relative;
+
+            h2 {
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+
+            p {
+                text-align: center;
+                font-weight: 300;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: calc(100% + 1px);
+                height: 1px;
+                background-color: $greyblue;
+                margin-left: -15px;
+            }
+        }
+
+        #nav-filters {
+        }
+
+        #network-menu {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                width: calc(100% + 1px);
+                height: 1px;
+                background-color: $greyblue;
+            }
+
+            ul {
+                display: flex;
+                li {
+                    float: left;
+                    list-style: none;
+                    height: 30px;
+                    line-height: 0;
+                    text-align: center;
+                    padding: 10px 15px;
+
+                    a {
+                        font-size: 0;
+                        &:before {
+                            display: block;
+                            font-family: 'icomoon';
+                            font-size: 20px;
+                        }
+                        &#fb:before {
+                            content: '\ea90';
+                            padding: 15px;
+                        }
+                        &#insta:before {
+                            content: '\ea92';
+                            padding: 15px;
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    main#main-subject{
+        margin-left: 20%;
+    }
+
 }
