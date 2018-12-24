@@ -172,14 +172,34 @@ h1, h2, p {
             }
 
             ul {
-                display: flex;
+                position: relative;
+                &:before {
+                    
+                }
+
                 li {
+                    padding: 10px 0;
                     float: left;
                     list-style: none;
+                    position: relative;
                     height: 30px;
                     line-height: 0;
                     text-align: center;
-                    padding: 10px 15px;
+                    width: 100%;
+                    &:not(:last-of-type) {
+                        width: 50%;
+                    }
+                    &:last-of-type {
+                        &:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            width: calc(100% + 1px);
+                            height: 1px;
+                            background-color: $greyblue;
+                        }
+                    }
 
                     a {
                         font-size: 0;
@@ -196,8 +216,12 @@ h1, h2, p {
                             content: '\ea92';
                             padding: 15px;
                         }
+                        &#artstation {
 
-
+                            svg {
+                                height: 30px;
+                            }
+                        } 
                     }
                 }
             }

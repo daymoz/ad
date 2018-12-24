@@ -174,18 +174,32 @@ h1, h2, p {
 }
 
 #homepage header#sidebar #network-menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
 }
 
 #homepage header#sidebar #network-menu ul li {
+  padding: 10px 0;
   float: left;
   list-style: none;
+  position: relative;
   height: 30px;
   line-height: 0;
   text-align: center;
-  padding: 10px 15px;
+  width: 100%;
+}
+
+#homepage header#sidebar #network-menu ul li:not(:last-of-type) {
+  width: 50%;
+}
+
+#homepage header#sidebar #network-menu ul li:last-of-type:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: calc(100% + 1px);
+  height: 1px;
+  background-color: #e7e3e3;
 }
 
 #homepage header#sidebar #network-menu ul li a {
@@ -206,6 +220,10 @@ h1, h2, p {
 #homepage header#sidebar #network-menu ul li a#insta:before {
   content: '\ea92';
   padding: 15px;
+}
+
+#homepage header#sidebar #network-menu ul li a#artstation svg {
+  height: 30px;
 }
 
 #homepage main#main-subject {
