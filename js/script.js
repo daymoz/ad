@@ -70,7 +70,23 @@ document.addEventListener('DOMContentLoaded', function(event) {
     //     delay: 4,
     // });
 });
-        
+
+// var menuTl = new TimelineLite;
+//         var subMenu = this.children[2];
+//         menuTl
+//             .to(subMenu, 0.2,  {
+//                 visibility: 'visible',
+//                 opacity: 1,
+//                 ease: Power3.easeIn,
+//             })
+
+// var mainNavItems = document.querySelectorAll('.nav-site-item');
+// console.log(mainNavItems);
+// mainNavItems.forEach(function(element) {
+//     element.addEventListener('mouseenter', function(e) {
+//         menuTl;
+//     });
+// });
 
 
 
